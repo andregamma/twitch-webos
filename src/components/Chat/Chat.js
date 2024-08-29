@@ -84,7 +84,7 @@ function Chat(props) {
             flexDirection: "column",
             gap: 10,
             width: 350,
-            maxHeight: "70vh",
+            maxHeight: "80vh",
           }}
         >
           {messages.map((message) => (
