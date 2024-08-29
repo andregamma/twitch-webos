@@ -3,7 +3,6 @@ import { Panel, Header } from "@enact/sandstone/Panels";
 import { TwitchEmbed } from "react-twitch-embed";
 import localforage from "localforage";
 import Chat from "../components/Chat/Chat";
-import AuthWrapper from "../components/AuthWrapper/AuthWrapper";
 import Input from '@enact/sandstone/Input';
 import PropTypes from 'prop-types';
 
@@ -26,14 +25,16 @@ const MainPanel = kind({
     }
   },
   render: (props) => (
-    <AuthWrapper {...props}>
-      <Panel>
-        <Input
-          onComplete={props.handleInputComplete}
-          placeholder="MyCoolStreamer"
-          title="Channel name"
-          value={props.channel}
-        />
+    // <AuthWrapper {...props}>
+      <Panel style={{ padding: 0}}>
+        {!props.channel && 
+          <Input
+            onComplete={props.handleInputComplete}
+            placeholder="MyCoolStreamer"
+            title="Channel name"
+            value={props.channel}
+          />
+        }
         {/* <Header title="Pagina inicial" /> */}
           {props.channel ? (
             <div
@@ -63,7 +64,7 @@ const MainPanel = kind({
             <span>No channel selected</span>
           )}
       </Panel>
-    </AuthWrapper>
+    // </AuthWrapper>
   )
 });
 
