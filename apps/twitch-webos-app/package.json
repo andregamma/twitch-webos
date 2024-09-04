@@ -1,5 +1,5 @@
 {
-	"name": "twitch-webos",
+	"name": "twitch-webos-app",
 	"version": "1.0.0",
 	"description": "Twitch app for webOS with support for 7TV, BTTV, and FFZ emotes",
 	"author": "André Gama",
