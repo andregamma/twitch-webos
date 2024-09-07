@@ -5,5 +5,11 @@
   "scripts": {
     "start:dev:app": "pnpm --filter twitch-webos-app run serve",
     "build:app": "pnpm --filter twitch-webos-app run pack-p"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.35.2",
+    "globals": "^15.9.0"
   }
 }
