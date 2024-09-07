@@ -1,5 +1,5 @@
 import kind from "@enact/core/kind";
-import { Panel, Header } from "@enact/sandstone/Panels";
+import { Panel } from "@enact/sandstone/Panels";
 import { TwitchEmbed } from "react-twitch-embed";
 import localforage from "localforage";
 import Chat from "../components/Chat/Chat";
@@ -27,7 +27,7 @@ const MainPanel = kind({
   render: (props) => (
     // <AuthWrapper {...props}>
       <Panel style={{ padding: 0}}>
-        {!props.channel && 
+        {!props.channel &&
           <Input
             onComplete={props.handleInputComplete}
             placeholder="MyCoolStreamer"
@@ -47,10 +47,6 @@ const MainPanel = kind({
               <TwitchEmbed
                 channel={props.channel}
                 hideControls
-                onAuthenticate={function noRefCheck() {}}
-                onVideoPause={function noRefCheck() {}}
-                onVideoPlay={function noRefCheck() {}}
-                onVideoReady={function noRefCheck() {}}
                 withChat={false}
                 style={{ flex: 1 }}
                 width={"100%"}

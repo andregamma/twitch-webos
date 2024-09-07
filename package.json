@@ -1,55 +1,15 @@
 {
-	"name": "twitch-webos",
-	"version": "1.0.0",
-	"description": "Twitch app for webOS with support for 7TV, BTTV, and FFZ emotes",
-	"author": "André Gama",
-	"main": "src/index.js",
-	"scripts": {
-		"serve": "enact serve",
-		"pack": "enact pack",
-		"pack-p": "enact pack -p",
-		"watch": "enact pack --watch",
-		"clean": "enact clean",
-		"lint": "enact lint .",
-		"license": "enact license",
-		"test": "enact test",
-		"test-watch": "enact test --watch"
-	},
-	"license": "UNLICENSED",
-	"private": true,
-	"repository": "",
-	"engines": {
-		"npm": ">=6.9.0"
-	},
-	"enact": {
-		"theme": "sandstone"
-	},
-	"eslintConfig": {
-		"extends": "enact-proxy"
-	},
-	"eslintIgnore": [
-		"node_modules/*",
-		"build/*",
-		"dist/*"
-	],
-	"dependencies": {
-		"@enact/core": "^4.7.8",
-		"@enact/i18n": "^4.7.8",
-		"@enact/sandstone": "^2.7.12",
-		"@enact/spotlight": "^4.7.8",
-		"@enact/ui": "^4.7.8",
-		"@enact/webos": "^4.7.8",
-		"emotettv": "^1.0.2",
-		"ilib": "npm:ilib-webos@^14.19.0-webos1",
-		"localforage": "^1.10.0",
-		"prop-types": "^15.8.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-twitch-embed": "^3.0.2",
-		"tmi.js": "^1.8.5",
-		"web-vitals": "^3.5.0"
-	},
-	"devDependencies": {
-		"eslint-config-enact-proxy": "^1.0.7"
-	}
+  "name": "twitch-webos",
+  "license": "GPL-3.0-only",
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
+  "scripts": {
+    "start:dev:app": "pnpm --filter twitch-webos-app run serve",
+    "build:app": "pnpm --filter twitch-webos-app run pack-p"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.35.2",
+    "globals": "^15.9.0"
+  }
 }
